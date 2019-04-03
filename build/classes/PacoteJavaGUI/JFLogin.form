@@ -90,11 +90,15 @@
           <Image iconType="3" name="/PacoteJavaGUI/imagens/entrar.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Entrar"/>
+        <Property name="hideActionText" type="boolean" value="true"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
         <Property name="verifyInputWhenFocusTarget" type="boolean" value="false"/>
         <Property name="verticalAlignment" type="int" value="1"/>
         <Property name="verticalTextPosition" type="int" value="1"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnEntrarActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnSair">
       <Properties>

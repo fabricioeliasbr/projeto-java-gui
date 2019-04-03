@@ -5,6 +5,9 @@
  */
 package PacoteJavaGUI;
 
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
 /**
  *
  * @author LABORATORIO_INFO
@@ -46,10 +49,16 @@ public class JFLogin extends javax.swing.JFrame {
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/entrar.png"))); // NOI18N
         btnEntrar.setText("Entrar");
+        btnEntrar.setHideActionText(true);
         btnEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnEntrar.setVerifyInputWhenFocusTarget(false);
         btnEntrar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
         btnEntrar.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
+        btnEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnEntrarActionPerformed(evt);
+            }
+        });
 
         btnSair.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/sair.png"))); // NOI18N
@@ -115,6 +124,23 @@ public class JFLogin extends javax.swing.JFrame {
         System.exit(0);
     }//GEN-LAST:event_btnSairActionPerformed
 
+    private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
+        // TODO add your handling code here:
+        String nomeUsuario = txtUsuario.getText();
+        
+        if(nomeUsuario.equals("etecia")){
+            JOptionPane.showMessageDialog(null, "Bem-vindo");
+            //Criando a instância janela
+            JFMenuPrincipal abrir = new JFMenuPrincipal();
+            //Abrindo a janela
+            abrir.setVisible(true);
+            this.setVisible(false);
+        }else{
+            JOptionPane.showMessageDialog(null, "Erro ao acessar o sistema");
+        }
+    }//GEN-LAST:event_btnEntrarActionPerformed
+
+
     /**
      * @param args the command line arguments
      */
@@ -149,6 +175,8 @@ public class JFLogin extends javax.swing.JFrame {
             }
         });
     }
+    
+  
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;
