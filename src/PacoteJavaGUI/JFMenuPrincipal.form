@@ -39,7 +39,7 @@
                   <Group type="102" attributes="0">
                       <Component id="jButton7" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnGerenciar1" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="btnPrint" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jButton6" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace pref="35" max="32767" attributes="0"/>
@@ -47,9 +47,9 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="btnGerenciar" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="btnGerenciarForn" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="btnGerenciar2" min="-2" pref="135" max="-2" attributes="0"/>
+                      <Component id="btnGerarNF" min="-2" pref="135" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
@@ -66,15 +66,15 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="52" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="btnGerenciar2" alignment="3" min="-2" pref="115" max="-2" attributes="0"/>
-                  <Component id="jButton5" alignment="3" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="btnGerarNF" alignment="3" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="btnGerenciarForn" alignment="3" min="-2" pref="115" max="-2" attributes="0"/>
                   <Component id="btnGerenciar" alignment="3" min="-2" pref="115" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jButton6" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
                   <Component id="jButton7" alignment="0" min="-2" pref="115" max="-2" attributes="0"/>
-                  <Component id="btnGerenciar1" min="-2" pref="115" max="-2" attributes="0"/>
+                  <Component id="btnPrint" min="-2" pref="115" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="32" max="32767" attributes="0"/>
               <Component id="btnVoltar" min="-2" pref="45" max="-2" attributes="0"/>
@@ -111,7 +111,7 @@
         <Property name="verticalTextPosition" type="int" value="3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
+    <Component class="javax.swing.JButton" name="btnGerenciarForn">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/PacoteJavaGUI/imagens/fornecedores.png"/>
@@ -124,13 +124,13 @@
         <Property name="verticalTextPosition" type="int" value="3"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciarFornActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnGerenciar1">
+    <Component class="javax.swing.JButton" name="btnPrint">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-          <Image iconType="3" name="/PacoteJavaGUI/imagens/printer-icon.png"/>
+          <Image iconType="3" name="/PacoteJavaGUI/imagens/imprimir.png"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Imprimir"/>
         <Property name="horizontalTextPosition" type="int" value="0"/>
@@ -141,7 +141,7 @@
         <Property name="verticalTextPosition" type="int" value="3"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciar1ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrintActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton7">
@@ -157,7 +157,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton7ActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="btnGerenciar2">
+    <Component class="javax.swing.JButton" name="btnGerarNF">
       <Properties>
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/PacoteJavaGUI/imagens/nf.png"/>
@@ -170,7 +170,7 @@
         <Property name="verticalTextPosition" type="int" value="3"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerenciar2ActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGerarNFActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton6">

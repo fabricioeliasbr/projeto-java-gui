@@ -3,6 +3,7 @@ package PacoteJavaGUI;
 import javax.swing.JOptionPane;
 
 public class Usuario {
+
     private String nome;
     private String email;
     private String login;
@@ -58,17 +59,15 @@ public class Usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    
-    public boolean autenticaUsuario(){
+
+    public boolean autenticaUsuario() {
         return true;
-        if(this.login == login && this.senha == senha){
-        JOptionPane.showMessageDialog(null, "Bem-vindo ao sistema." );
-        }else{
-        JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos.");
+        if (this.login == login && this.senha == senha) {
+            JOptionPane.showMessageDialog(null, "Bem-vindo ao sistema.");
+        } else {
+            JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos.");
         }
-        
+
     }
-    
+
 }
-
-

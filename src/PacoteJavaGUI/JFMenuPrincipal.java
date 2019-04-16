@@ -30,10 +30,10 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         jTabbedPane1 = new javax.swing.JTabbedPane();
         btnVoltar = new javax.swing.JButton();
         btnGerenciar = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        btnGerenciar1 = new javax.swing.JButton();
+        btnGerenciarForn = new javax.swing.JButton();
+        btnPrint = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
-        btnGerenciar2 = new javax.swing.JButton();
+        btnGerarNF = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,26 +55,26 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         btnGerenciar.setPreferredSize(new java.awt.Dimension(75, 25));
         btnGerenciar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        jButton5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
-        jButton5.setText("Gerenciar fornecedores");
-        jButton5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton5.setPreferredSize(new java.awt.Dimension(75, 25));
-        jButton5.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btnGerenciarForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
+        btnGerenciarForn.setText("Gerenciar fornecedores");
+        btnGerenciarForn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGerenciarForn.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnGerenciarForn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGerenciarForn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btnGerenciarFornActionPerformed(evt);
             }
         });
 
-        btnGerenciar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/printer-icon.png"))); // NOI18N
-        btnGerenciar1.setText("Imprimir");
-        btnGerenciar1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerenciar1.setInheritsPopupMenu(true);
-        btnGerenciar1.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerenciar1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerenciar1.addActionListener(new java.awt.event.ActionListener() {
+        btnPrint.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
+        btnPrint.setText("Imprimir");
+        btnPrint.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPrint.setInheritsPopupMenu(true);
+        btnPrint.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnPrint.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnPrint.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerenciar1ActionPerformed(evt);
+                btnPrintActionPerformed(evt);
             }
         });
 
@@ -88,14 +88,14 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
             }
         });
 
-        btnGerenciar2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
-        btnGerenciar2.setText("Gerar NF");
-        btnGerenciar2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerenciar2.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerenciar2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerenciar2.addActionListener(new java.awt.event.ActionListener() {
+        btnGerarNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
+        btnGerarNF.setText("Gerar NF");
+        btnGerarNF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGerarNF.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnGerarNF.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGerarNF.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerenciar2ActionPerformed(evt);
+                btnGerarNFActionPerformed(evt);
             }
         });
 
@@ -119,16 +119,16 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnGerenciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addContainerGap(35, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(btnGerenciar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGerenciarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnGerenciar2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnGerarNF, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -140,14 +140,14 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(52, 52, 52)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGerenciar2, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGerarNF, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnGerenciarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnGerenciar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(84, 84, 84)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGerenciar1, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
@@ -160,21 +160,21 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
+    private void btnGerenciarFornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarFornActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton5ActionPerformed
+    }//GEN-LAST:event_btnGerenciarFornActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void btnGerenciar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciar1ActionPerformed
+    private void btnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGerenciar1ActionPerformed
+    }//GEN-LAST:event_btnPrintActionPerformed
 
-    private void btnGerenciar2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciar2ActionPerformed
+    private void btnGerarNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarNFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGerenciar2ActionPerformed
+    }//GEN-LAST:event_btnGerarNFActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
@@ -216,11 +216,11 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnGerarNF;
     private javax.swing.JButton btnGerenciar;
-    private javax.swing.JButton btnGerenciar1;
-    private javax.swing.JButton btnGerenciar2;
+    private javax.swing.JButton btnGerenciarForn;
+    private javax.swing.JButton btnPrint;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JTabbedPane jTabbedPane1;

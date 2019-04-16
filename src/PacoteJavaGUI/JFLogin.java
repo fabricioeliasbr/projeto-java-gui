@@ -49,11 +49,8 @@ public class JFLogin extends javax.swing.JFrame {
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnEntrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/entrar.png"))); // NOI18N
         btnEntrar.setText("Entrar");
-        btnEntrar.setHideActionText(true);
-        btnEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnEntrar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnEntrar.setVerifyInputWhenFocusTarget(false);
-        btnEntrar.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        btnEntrar.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
