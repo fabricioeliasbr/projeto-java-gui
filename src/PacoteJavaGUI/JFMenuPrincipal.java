@@ -28,17 +28,87 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
+        btnAdmin = new javax.swing.JButton();
+        btnGerProdutos = new javax.swing.JButton();
+        btnGerForn = new javax.swing.JButton();
+        btnImprimir = new javax.swing.JButton();
+        btnNF = new javax.swing.JButton();
+        btnFinancas = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
-        btnGerenciar = new javax.swing.JButton();
-        btnGerenciarForn = new javax.swing.JButton();
-        btnPrint = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        btnGerarNF = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MyApplication - Menu");
+        setTitle("Menu");
         setPreferredSize(new java.awt.Dimension(500, 350));
+        setResizable(false);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
+        btnAdmin.setText("Administradores");
+        btnAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdmin.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnAdmin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 60, 135, 115));
+
+        btnGerProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
+        btnGerProdutos.setText("Gerenciar produtos");
+        btnGerProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGerProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnGerProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGerProdutos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerProdutosActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGerProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 60, 135, 115));
+
+        btnGerForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
+        btnGerForn.setText("Gerenciar fornecedores");
+        btnGerForn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGerForn.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnGerForn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGerForn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGerFornActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnGerForn, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 60, 135, 115));
+
+        btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
+        btnImprimir.setText("Imprimir");
+        btnImprimir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnImprimir.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnImprimir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnImprimir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnImprimirActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 259, 135, 115));
+
+        btnNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
+        btnNF.setText("Gerar NF");
+        btnNF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnNF.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnNF.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnNF.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNFActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnNF, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 259, 135, 115));
+
+        btnFinancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/grafico.png"))); // NOI18N
+        btnFinancas.setText("Fiinanças");
+        btnFinancas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFinancas.setInheritsPopupMenu(true);
+        btnFinancas.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnFinancas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnFinancas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinancasActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 259, 135, 115));
 
         btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/back.png"))); // NOI18N
         btnVoltar.setText("Voltar");
@@ -48,137 +118,50 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnVoltarActionPerformed(evt);
             }
         });
-
-        btnGerenciar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
-        btnGerenciar.setText("Gerenciar Produtos");
-        btnGerenciar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerenciar.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerenciar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-
-        btnGerenciarForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
-        btnGerenciarForn.setText("Gerenciar fornecedores");
-        btnGerenciarForn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerenciarForn.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerenciarForn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerenciarForn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerenciarFornActionPerformed(evt);
-            }
-        });
-
-        btnPrint.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
-        btnPrint.setText("Imprimir");
-        btnPrint.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnPrint.setInheritsPopupMenu(true);
-        btnPrint.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnPrint.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnPrint.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnPrintActionPerformed(evt);
-            }
-        });
-
-        jButton7.setText("jButton1");
-        jButton7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton7.setPreferredSize(new java.awt.Dimension(75, 25));
-        jButton7.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
-            }
-        });
-
-        btnGerarNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
-        btnGerarNF.setText("Gerar NF");
-        btnGerarNF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerarNF.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerarNF.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerarNF.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerarNFActionPerformed(evt);
-            }
-        });
-
-        jButton6.setText("jButton1");
-        jButton6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        jButton6.setPreferredSize(new java.awt.Dimension(75, 25));
-        jButton6.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(35, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnGerenciar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnGerenciarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btnGerarNF, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(52, 52, 52)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnGerarNF, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGerenciarForn, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnGerenciar, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(84, 84, 84)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnPrint, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 90, 45));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    public void run() {
+        new JFLogin().setVisible(true);
+        new JFGerenciarProdutos().setVisible(true);
+    }    
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
+            //Criando a instância janela
+            JFLogin abrir = new JFLogin();
+            //Abrindo a janela
+            abrir.setVisible(true);
+            this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void btnGerenciarFornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerenciarFornActionPerformed
+    private void btnGerProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerProdutosActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGerenciarFornActionPerformed
+        //Criando a instância janela
+        JFGerenciarProdutos abrir = new JFGerenciarProdutos();
+        //Abrindo a janela
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnGerProdutosActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
+    private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton7ActionPerformed
+    }//GEN-LAST:event_btnImprimirActionPerformed
 
-    private void btnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintActionPerformed
+    private void btnFinancasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinancasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnPrintActionPerformed
+    }//GEN-LAST:event_btnFinancasActionPerformed
 
-    private void btnGerarNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerarNFActionPerformed
+    private void btnGerFornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerFornActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGerarNFActionPerformed
+    }//GEN-LAST:event_btnGerFornActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+    private void btnNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNFActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton6ActionPerformed
+    }//GEN-LAST:event_btnNFActionPerformed
 
     /**
      * @param args the command line arguments
@@ -216,13 +199,13 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnGerarNF;
-    private javax.swing.JButton btnGerenciar;
-    private javax.swing.JButton btnGerenciarForn;
-    private javax.swing.JButton btnPrint;
+    private javax.swing.JButton btnAdmin;
+    private javax.swing.JButton btnFinancas;
+    private javax.swing.JButton btnGerForn;
+    private javax.swing.JButton btnGerProdutos;
+    private javax.swing.JButton btnImprimir;
+    private javax.swing.JButton btnNF;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }

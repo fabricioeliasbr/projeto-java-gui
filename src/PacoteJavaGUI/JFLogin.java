@@ -39,7 +39,7 @@ public class JFLogin extends javax.swing.JFrame {
         lblImagem = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("MyApplication - Login");
+        setTitle("Login");
         setResizable(false);
 
         txtUsuario.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -124,19 +124,18 @@ public class JFLogin extends javax.swing.JFrame {
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
         // TODO add your handling code here:
         String nomeUsuario = txtUsuario.getText();
-        
-        if(nomeUsuario.equals("etecia")){
+
+        if (nomeUsuario.equals("123")) {
             JOptionPane.showMessageDialog(null, "Bem-vindo");
             //Criando a instância janela
             JFMenuPrincipal abrir = new JFMenuPrincipal();
             //Abrindo a janela
             abrir.setVisible(true);
             this.setVisible(false);
-        }else{
+        } else {
             JOptionPane.showMessageDialog(null, "Erro ao acessar o sistema");
         }
     }//GEN-LAST:event_btnEntrarActionPerformed
-
 
     /**
      * @param args the command line arguments
@@ -172,8 +171,7 @@ public class JFLogin extends javax.swing.JFrame {
             }
         });
     }
-    
-  
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEntrar;

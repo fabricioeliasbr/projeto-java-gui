@@ -33,11 +33,11 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         btnExcluir = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
         lblImpressora = new javax.swing.JLabel();
-        lblNotebook = new javax.swing.JLabel();
         lblSmartphone = new javax.swing.JLabel();
+        lblNotebook = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(440, 395));
+        setPreferredSize(new java.awt.Dimension(422, 390));
 
         btnNovo.setText("Novo");
         btnNovo.addActionListener(new java.awt.event.ActionListener() {
@@ -56,6 +56,11 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         btnExcluir.setText("Excluir");
 
         btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -85,46 +90,58 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         );
 
         lblImpressora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/impressora.jpg"))); // NOI18N
+        lblImpressora.setText("Impressora");
         lblImpressora.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblImpressora.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        lblNotebook.setText("jLabel1");
+        lblSmartphone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/iphone.png"))); // NOI18N
+        lblSmartphone.setText("Smartphone");
+        lblSmartphone.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblSmartphone.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
-        lblSmartphone.setText("jLabel1");
+        lblNotebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/notebook.png"))); // NOI18N
+        lblNotebook.setText("Notebook");
+        lblNotebook.setToolTipText("");
+        lblNotebook.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        lblNotebook.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(30, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(lblImpressora)
-                        .addGap(46, 46, 46)
-                        .addComponent(lblSmartphone, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(lblNotebook, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(24, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(26, 26, 26))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(lblImpressora, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(lblNotebook, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(50, 50, 50)
+                .addComponent(lblSmartphone, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(lblNotebook, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblSmartphone, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(31, 31, 31)
-                        .addComponent(lblImpressora)))
+                .addGap(80, 80, 80)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblSmartphone, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblNotebook, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblImpressora, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    public void run() {    
+        new JFMenuPrincipal().setVisible(true);
+    }
+    
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEditarActionPerformed
@@ -132,6 +149,15 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnNovoActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+            //Criando a instância janela
+            JFMenuPrincipal abrir = new JFMenuPrincipal();
+            //Abrindo a janela
+            abrir.setVisible(true);
+            this.setVisible(false);
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments

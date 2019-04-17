@@ -61,12 +61,12 @@ public class Usuario {
     }
 
     public boolean autenticaUsuario() {
-        return true;
         if (this.login == login && this.senha == senha) {
             JOptionPane.showMessageDialog(null, "Bem-vindo ao sistema.");
         } else {
             JOptionPane.showMessageDialog(null, "Usuário ou senha incorretos.");
         }
+        return true;
 
     }
 
