@@ -54,6 +54,11 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         });
 
         btnExcluir.setText("Excluir");
+        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExcluirActionPerformed(evt);
+            }
+        });
 
         btnVoltar.setText("Voltar");
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
@@ -142,12 +147,24 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
         new JFMenuPrincipal().setVisible(true);
     }
     
+    public void desabilitaBotoes(){
+            btnEditar.setEnabled(false);
+            btnExcluir.setEnabled(false);
+            btnNovo.setEnabled(false);
+    }
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
+        if(btnEditar.isEnabled()){
+            desabilitaBotoes();
+        }
+        
     }//GEN-LAST:event_btnEditarActionPerformed
 
     private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
         // TODO add your handling code here:
+        if(btnNovo.isEnabled()){
+            desabilitaBotoes();
+        }
     }//GEN-LAST:event_btnNovoActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -158,6 +175,13 @@ public class JFGerenciarProdutos extends javax.swing.JFrame {
             abrir.setVisible(true);
             this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+        // TODO add your handling code here:
+        if(btnExcluir.isEnabled()){
+            desabilitaBotoes();
+        }
+    }//GEN-LAST:event_btnExcluirActionPerformed
 
     /**
      * @param args the command line arguments

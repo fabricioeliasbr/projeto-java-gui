@@ -47,7 +47,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         btnAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAdmin.setPreferredSize(new java.awt.Dimension(75, 25));
         btnAdmin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 60, 135, 115));
+        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 135, 115));
 
         btnGerProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
         btnGerProdutos.setText("Gerenciar produtos");
@@ -59,7 +59,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnGerProdutosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGerProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 60, 135, 115));
+        getContentPane().add(btnGerProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 135, 115));
 
         btnGerForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
         btnGerForn.setText("Gerenciar fornecedores");
@@ -71,7 +71,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnGerFornActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGerForn, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 60, 135, 115));
+        getContentPane().add(btnGerForn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 135, 115));
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
@@ -83,7 +83,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 259, 135, 115));
+        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 135, 115));
 
         btnNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
         btnNF.setText("Gerar NF");
@@ -95,7 +95,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnNFActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNF, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 259, 135, 115));
+        getContentPane().add(btnNF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 135, 115));
 
         btnFinancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/grafico.png"))); // NOI18N
         btnFinancas.setText("Fiinanças");
@@ -108,19 +108,20 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnFinancasActionPerformed(evt);
             }
         });
-        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 259, 135, 115));
+        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 135, 115));
 
-        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/back.png"))); // NOI18N
-        btnVoltar.setText("Voltar");
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/sairsistema.png"))); // NOI18N
+        btnVoltar.setText("Sair do sistema");
+        btnVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnVoltar.setPreferredSize(new java.awt.Dimension(110, 35));
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 90, 45));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 460, 45));
 
-        pack();
+        setSize(new java.awt.Dimension(496, 488));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
