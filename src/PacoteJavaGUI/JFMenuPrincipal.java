@@ -44,6 +44,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+<<<<<<< HEAD
         btnFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
         btnFuncionarios.setText("Funcionários");
         btnFuncionarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
@@ -57,10 +58,26 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         btnProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
         btnProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnProdutos.addActionListener(new java.awt.event.ActionListener() {
+=======
+        btnAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
+        btnAdmin.setText("Administradores");
+        btnAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnAdmin.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnAdmin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 135, 115));
+
+        btnGerProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
+        btnGerProdutos.setText("Gerenciar produtos");
+        btnGerProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGerProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnGerProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGerProdutos.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProdutosActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(btnProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 135, 115));
 
         btnFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
@@ -69,11 +86,25 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         btnFornecedores.setPreferredSize(new java.awt.Dimension(75, 25));
         btnFornecedores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnFornecedores.addActionListener(new java.awt.event.ActionListener() {
+=======
+        getContentPane().add(btnGerProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 135, 115));
+
+        btnGerForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
+        btnGerForn.setText("Gerenciar fornecedores");
+        btnGerForn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnGerForn.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnGerForn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnGerForn.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFornecedoresActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(btnFornecedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 135, 115));
+=======
+        getContentPane().add(btnGerForn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 135, 115));
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
@@ -85,6 +116,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 135, 115));
 
         btnClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/clientes.png"))); // NOI18N
@@ -93,11 +125,25 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         btnClientes.setPreferredSize(new java.awt.Dimension(75, 25));
         btnClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnClientes.addActionListener(new java.awt.event.ActionListener() {
+=======
+        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 135, 115));
+
+        btnNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
+        btnNF.setText("Gerar NF");
+        btnNF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnNF.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnNF.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnNF.addActionListener(new java.awt.event.ActionListener() {
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnClientesActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 135, 115));
+=======
+        getContentPane().add(btnNF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 135, 115));
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
 
         btnFinancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/grafico.png"))); // NOI18N
         btnFinancas.setText("Fiinanças");
@@ -110,19 +156,31 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnFinancasActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 135, 115));
+=======
+        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 135, 115));
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
 
-        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/back.png"))); // NOI18N
-        btnVoltar.setText("Voltar");
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/sairsistema.png"))); // NOI18N
+        btnVoltar.setText("Sair do sistema");
+        btnVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
         btnVoltar.setPreferredSize(new java.awt.Dimension(110, 35));
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
+<<<<<<< HEAD
         getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 90, 45));
 
         pack();
+=======
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 460, 45));
+
+        setSize(new java.awt.Dimension(496, 488));
+        setLocationRelativeTo(null);
+>>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
     }// </editor-fold>//GEN-END:initComponents
 
     public void run() {
