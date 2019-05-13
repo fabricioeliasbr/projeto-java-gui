@@ -28,50 +28,52 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        btnAdmin = new javax.swing.JButton();
-        btnGerProdutos = new javax.swing.JButton();
-        btnGerForn = new javax.swing.JButton();
+        btnFuncionarios = new javax.swing.JButton();
+        btnProdutos = new javax.swing.JButton();
+        btnFornecedores = new javax.swing.JButton();
         btnImprimir = new javax.swing.JButton();
-        btnNF = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
         btnFinancas = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Menu");
-        setPreferredSize(new java.awt.Dimension(500, 350));
+        setAlwaysOnTop(true);
+        setMinimumSize(new java.awt.Dimension(465, 425));
+        setPreferredSize(new java.awt.Dimension(470, 450));
         setResizable(false);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
-        btnAdmin.setText("Administradores");
-        btnAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdmin.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnAdmin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 60, 135, 115));
+        btnFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
+        btnFuncionarios.setText("Funcionários");
+        btnFuncionarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFuncionarios.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnFuncionarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        getContentPane().add(btnFuncionarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 135, 115));
 
-        btnGerProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
-        btnGerProdutos.setText("Gerenciar produtos");
-        btnGerProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerProdutos.addActionListener(new java.awt.event.ActionListener() {
+        btnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
+        btnProdutos.setText("Produtos");
+        btnProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnProdutos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerProdutosActionPerformed(evt);
+                btnProdutosActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGerProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 60, 135, 115));
+        getContentPane().add(btnProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 135, 115));
 
-        btnGerForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
-        btnGerForn.setText("Gerenciar fornecedores");
-        btnGerForn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerForn.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerForn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerForn.addActionListener(new java.awt.event.ActionListener() {
+        btnFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
+        btnFornecedores.setText("Fornecedores");
+        btnFornecedores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFornecedores.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnFornecedores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnFornecedores.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGerFornActionPerformed(evt);
+                btnFornecedoresActionPerformed(evt);
             }
         });
-        getContentPane().add(btnGerForn, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 60, 135, 115));
+        getContentPane().add(btnFornecedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 135, 115));
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
@@ -83,19 +85,19 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnImprimirActionPerformed(evt);
             }
         });
-        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 259, 135, 115));
+        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 135, 115));
 
-        btnNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
-        btnNF.setText("Gerar NF");
-        btnNF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnNF.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnNF.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnNF.addActionListener(new java.awt.event.ActionListener() {
+        btnClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/clientes.png"))); // NOI18N
+        btnClientes.setText("Clientes");
+        btnClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnClientes.setPreferredSize(new java.awt.Dimension(75, 25));
+        btnClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnClientes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNFActionPerformed(evt);
+                btnClientesActionPerformed(evt);
             }
         });
-        getContentPane().add(btnNF, new org.netbeans.lib.awtextra.AbsoluteConstraints(167, 259, 135, 115));
+        getContentPane().add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 135, 115));
 
         btnFinancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/grafico.png"))); // NOI18N
         btnFinancas.setText("Fiinanças");
@@ -108,7 +110,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnFinancasActionPerformed(evt);
             }
         });
-        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(312, 259, 135, 115));
+        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 135, 115));
 
         btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/back.png"))); // NOI18N
         btnVoltar.setText("Voltar");
@@ -118,15 +120,14 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
                 btnVoltarActionPerformed(evt);
             }
         });
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 380, 90, 45));
+        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 90, 45));
 
         pack();
-        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     public void run() {
         new JFLogin().setVisible(true);
-        new JFGerenciarProdutos().setVisible(true);
+        new JFProdutos().setVisible(true);
     }    
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
@@ -138,14 +139,14 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
             this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void btnGerProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerProdutosActionPerformed
+    private void btnProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutosActionPerformed
         // TODO add your handling code here:
         //Criando a instância janela
-        JFGerenciarProdutos abrir = new JFGerenciarProdutos();
+        JFProdutos abrir = new JFProdutos();
         //Abrindo a janela
         abrir.setVisible(true);
         this.setVisible(false);
-    }//GEN-LAST:event_btnGerProdutosActionPerformed
+    }//GEN-LAST:event_btnProdutosActionPerformed
 
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         // TODO add your handling code here:
@@ -155,13 +156,13 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnFinancasActionPerformed
 
-    private void btnGerFornActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGerFornActionPerformed
+    private void btnFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFornecedoresActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnGerFornActionPerformed
+    }//GEN-LAST:event_btnFornecedoresActionPerformed
 
-    private void btnNFActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNFActionPerformed
+    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnNFActionPerformed
+    }//GEN-LAST:event_btnClientesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,12 +200,12 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAdmin;
+    private javax.swing.JButton btnClientes;
     private javax.swing.JButton btnFinancas;
-    private javax.swing.JButton btnGerForn;
-    private javax.swing.JButton btnGerProdutos;
+    private javax.swing.JButton btnFornecedores;
+    private javax.swing.JButton btnFuncionarios;
     private javax.swing.JButton btnImprimir;
-    private javax.swing.JButton btnNF;
+    private javax.swing.JButton btnProdutos;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
