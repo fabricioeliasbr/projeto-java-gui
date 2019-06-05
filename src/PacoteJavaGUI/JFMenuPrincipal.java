@@ -27,175 +27,164 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPainel = new javax.swing.JPanel();
         btnFuncionarios = new javax.swing.JButton();
         btnProdutos = new javax.swing.JButton();
         btnFornecedores = new javax.swing.JButton();
-        btnImprimir = new javax.swing.JButton();
-        btnClientes = new javax.swing.JButton();
         btnFinancas = new javax.swing.JButton();
+        btnClientes = new javax.swing.JButton();
+        btnImprimir = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Menu");
-        setAlwaysOnTop(true);
-        setMinimumSize(new java.awt.Dimension(465, 425));
-        setPreferredSize(new java.awt.Dimension(470, 450));
-        setResizable(false);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setSize(new java.awt.Dimension(500, 500));
 
-<<<<<<< HEAD
-        btnFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
+        jPainel.setBackground(new java.awt.Color(204, 204, 255));
+
+        btnFuncionarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/funcionarios.png"))); // NOI18N
         btnFuncionarios.setText("Funcionários");
+        btnFuncionarios.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         btnFuncionarios.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnFuncionarios.setPreferredSize(new java.awt.Dimension(75, 25));
         btnFuncionarios.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnFuncionarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 135, 115));
+        btnFuncionarios.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFuncionariosActionPerformed(evt);
+            }
+        });
 
-        btnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
+        btnProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produtos.png"))); // NOI18N
         btnProdutos.setText("Produtos");
+        btnProdutos.setHideActionText(true);
         btnProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
         btnProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnProdutos.addActionListener(new java.awt.event.ActionListener() {
-=======
-        btnAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/pessoa.png"))); // NOI18N
-        btnAdmin.setText("Administradores");
-        btnAdmin.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnAdmin.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnAdmin.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        getContentPane().add(btnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 135, 115));
-
-        btnGerProdutos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/produto.png"))); // NOI18N
-        btnGerProdutos.setText("Gerenciar produtos");
-        btnGerProdutos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerProdutos.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerProdutos.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerProdutos.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnProdutosActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        getContentPane().add(btnProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 20, 135, 115));
 
         btnFornecedores.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
         btnFornecedores.setText("Fornecedores");
+        btnFornecedores.setToolTipText("");
         btnFornecedores.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnFornecedores.setPreferredSize(new java.awt.Dimension(75, 25));
         btnFornecedores.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnFornecedores.addActionListener(new java.awt.event.ActionListener() {
-=======
-        getContentPane().add(btnGerProdutos, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 60, 135, 115));
-
-        btnGerForn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/fornecedores.png"))); // NOI18N
-        btnGerForn.setText("Gerenciar fornecedores");
-        btnGerForn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnGerForn.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnGerForn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnGerForn.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFornecedoresActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        getContentPane().add(btnFornecedores, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 20, 135, 115));
-=======
-        getContentPane().add(btnGerForn, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, 135, 115));
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
+
+        btnFinancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/financas.png"))); // NOI18N
+        btnFinancas.setText("Finanças");
+        btnFinancas.setDefaultCapable(false);
+        btnFinancas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnFinancas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+
+        btnClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/cliente.png"))); // NOI18N
+        btnClientes.setText("Clientes");
+        btnClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
 
         btnImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/imprimir.png"))); // NOI18N
         btnImprimir.setText("Imprimir");
         btnImprimir.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnImprimir.setPreferredSize(new java.awt.Dimension(75, 25));
         btnImprimir.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnImprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnImprimirActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 135, 115));
 
-        btnClientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/clientes.png"))); // NOI18N
-        btnClientes.setText("Clientes");
-        btnClientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnClientes.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnClientes.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnClientes.addActionListener(new java.awt.event.ActionListener() {
-=======
-        getContentPane().add(btnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, 135, 115));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        btnNF.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/nf.png"))); // NOI18N
-        btnNF.setText("Gerar NF");
-        btnNF.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnNF.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnNF.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnNF.addActionListener(new java.awt.event.ActionListener() {
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnClientesActionPerformed(evt);
-            }
-        });
-<<<<<<< HEAD
-        getContentPane().add(btnClientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 135, 115));
-=======
-        getContentPane().add(btnNF, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 230, 135, 115));
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
-
-        btnFinancas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/grafico.png"))); // NOI18N
-        btnFinancas.setText("Fiinanças");
-        btnFinancas.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        btnFinancas.setInheritsPopupMenu(true);
-        btnFinancas.setPreferredSize(new java.awt.Dimension(75, 25));
-        btnFinancas.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
-        btnFinancas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnFinancasActionPerformed(evt);
-            }
-        });
-<<<<<<< HEAD
-        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 170, 135, 115));
-=======
-        getContentPane().add(btnFinancas, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 135, 115));
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
-
-        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/sairsistema.png"))); // NOI18N
-        btnVoltar.setText("Sair do sistema");
-        btnVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        btnVoltar.setPreferredSize(new java.awt.Dimension(110, 35));
+        btnVoltar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/back.png"))); // NOI18N
+        btnVoltar.setText("Voltar");
+        btnVoltar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnVoltar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         btnVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVoltarActionPerformed(evt);
             }
         });
-<<<<<<< HEAD
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 340, 90, 45));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addContainerGap(42, Short.MAX_VALUE)
+                .addComponent(btnVoltar, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+
+        javax.swing.GroupLayout jPainelLayout = new javax.swing.GroupLayout(jPainel);
+        jPainel.setLayout(jPainelLayout);
+        jPainelLayout.setHorizontalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPainelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnFuncionarios, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFinancas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(79, 79, 79)
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 89, Short.MAX_VALUE)
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap())
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jPainelLayout.setVerticalGroup(
+            jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPainelLayout.createSequentialGroup()
+                .addContainerGap(16, Short.MAX_VALUE)
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnFuncionarios, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnProdutos, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFornecedores, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(60, 60, 60)
+                .addGroup(jPainelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnClientes, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnFinancas, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPainel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPainel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         pack();
-=======
-        getContentPane().add(btnVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 460, 45));
-
-        setSize(new java.awt.Dimension(496, 488));
-        setLocationRelativeTo(null);
->>>>>>> be631e079fd3c692da3cdeada72e2d0827fb645f
     }// </editor-fold>//GEN-END:initComponents
 
-    public void run() {
-        new JFLogin().setVisible(true);
-        new JFProdutos().setVisible(true);
-    }    
-
-    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+    private void btnFuncionariosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFuncionariosActionPerformed
         // TODO add your handling code here:
-            //Criando a instância janela
-            JFLogin abrir = new JFLogin();
-            //Abrindo a janela
-            abrir.setVisible(true);
-            this.setVisible(false);
-    }//GEN-LAST:event_btnVoltarActionPerformed
+        //Criando a instância janela
+        JFFuncionarios abrir = new JFFuncionarios();
+        abrir.setVisible(true);
+        this.setVisible(true);
+    }//GEN-LAST:event_btnFuncionariosActionPerformed
 
     private void btnProdutosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProdutosActionPerformed
         // TODO add your handling code here:
@@ -206,21 +195,27 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
         this.setVisible(false);
     }//GEN-LAST:event_btnProdutosActionPerformed
 
+    private void btnFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFornecedoresActionPerformed
+        // TODO add your handling code here:
+        //Criando a instância janela
+        JFFornecedores abrir = new JFFornecedores();
+        //Abrindo a janela
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnFornecedoresActionPerformed
+
     private void btnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnImprimirActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnImprimirActionPerformed
 
-    private void btnFinancasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinancasActionPerformed
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnFinancasActionPerformed
-
-    private void btnFornecedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFornecedoresActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnFornecedoresActionPerformed
-
-    private void btnClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnClientesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnClientesActionPerformed
+        //Criando a instância janela
+        JFLogin abrir = new JFLogin();
+        //Abrindo a janela
+        abrir.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -265,6 +260,7 @@ public class JFMenuPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnImprimir;
     private javax.swing.JButton btnProdutos;
     private javax.swing.JButton btnVoltar;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel jPainel;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

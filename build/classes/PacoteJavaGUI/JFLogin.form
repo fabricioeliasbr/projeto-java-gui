@@ -42,12 +42,10 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="btnCadastrar" pref="180" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                      <Component id="txtUsuario" max="32767" attributes="0"/>
-                      <Component id="btnEntrar" alignment="0" pref="180" max="32767" attributes="0"/>
-                      <Component id="btnSair" alignment="0" max="32767" attributes="0"/>
-                      <Component id="txtSenha" alignment="0" max="32767" attributes="0"/>
-                  </Group>
+                  <Component id="txtUsuario" max="32767" attributes="0"/>
+                  <Component id="btnEntrar" alignment="0" pref="180" max="32767" attributes="0"/>
+                  <Component id="btnSair" alignment="0" max="32767" attributes="0"/>
+                  <Component id="txtSenha" alignment="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
