@@ -39,7 +39,7 @@ public class JFFuncionarios extends javax.swing.JFrame {
         txtCPF = new javax.swing.JTextField();
         txtTelefone = new javax.swing.JTextField();
         txtEndereco = new javax.swing.JTextField();
-        btnNovo = new javax.swing.JButton();
+        btnSalvar = new javax.swing.JButton();
         btnLimpar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
@@ -64,11 +64,21 @@ public class JFFuncionarios extends javax.swing.JFrame {
         lblEndereco.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         lblEndereco.setText("Endereço:");
 
-        btnNovo.setText("Novo");
-        btnNovo.setPreferredSize(new java.awt.Dimension(61, 23));
+        btnSalvar.setText("Salvar");
+        btnSalvar.setPreferredSize(new java.awt.Dimension(61, 23));
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalvarActionPerformed(evt);
+            }
+        });
 
         btnLimpar.setText("Limpar");
         btnLimpar.setPreferredSize(new java.awt.Dimension(65, 23));
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLimparActionPerformed(evt);
+            }
+        });
 
         btnEditar.setText("Editar");
         btnEditar.setPreferredSize(new java.awt.Dimension(65, 23));
@@ -96,18 +106,17 @@ public class JFFuncionarios extends javax.swing.JFrame {
                 .addGap(60, 60, 60)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(btnNovo, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, 65, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(txtNome)
-                        .addComponent(txtEmail)
-                        .addComponent(txtRG)
-                        .addComponent(txtCPF)
-                        .addComponent(txtTelefone)
-                        .addComponent(txtEndereco, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))
+                    .addComponent(txtNome)
+                    .addComponent(txtEmail)
+                    .addComponent(txtRG)
+                    .addComponent(txtCPF)
+                    .addComponent(txtTelefone)
+                    .addComponent(txtEndereco)
                     .addComponent(btnVoltar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(137, Short.MAX_VALUE))
         );
@@ -140,7 +149,7 @@ public class JFFuncionarios extends javax.swing.JFrame {
                     .addComponent(txtEndereco, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnSalvar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnLimpar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEditar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -149,16 +158,64 @@ public class JFFuncionarios extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    public void desabilitaTextos() {
+        txtNome.setEnabled(false);
+        txtEmail.setEnabled(false);
+        txtRG.setEnabled(false);
+        txtCPF.setEnabled(false);
+        txtTelefone.setEnabled(false);
+        txtEndereco.setEnabled(false);
+    }
+
+    public void desabilitaSalvar() {
+        btnSalvar.setEnabled(false);
+    }
+
+    public void desabilitaLimpar() {
+        btnLimpar.setEnabled(false);
+    }
+
+    public void desabilitaEditar() {
+        btnEditar.setEnabled(false);
+    }
+
+    public void desabilitaBotoes() {
+        btnEditar.setEnabled(false);
+        btnLimpar.setEnabled(false);
+        btnSalvar.setEnabled(false);
+    }
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
-            //Criando a instância janela
-            JFMenuPrincipal abrir = new JFMenuPrincipal();
-            //Abrindo a janela
-            abrir.setVisible(true);
-            this.setVisible(false);
+        //Criando a instância janela
+        JFMenuPrincipal abrir = new JFMenuPrincipal();
+        //Abrindo a janela
+        abrir.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
+
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
+        // TODO add your handling code here:
+        if (btnSalvar.isEnabled()) {
+            desabilitaTextos();
+            desabilitaSalvar();
+            desabilitaEditar();
+        }
+    }//GEN-LAST:event_btnSalvarActionPerformed
+
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
+        // TODO add your handling code here:
+        if (btnLimpar.isEnabled()) {
+            txtNome.setText("");
+            txtEmail.setText("");
+            txtRG.setText("");
+            txtCPF.setText("");
+            txtTelefone.setText("");
+            txtEndereco.setText("");
+        }
+    }//GEN-LAST:event_btnLimparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -199,7 +256,7 @@ public class JFFuncionarios extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
     private javax.swing.JButton btnLimpar;
-    private javax.swing.JButton btnNovo;
+    private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel lblCPF;
     private javax.swing.JLabel lblEmail;

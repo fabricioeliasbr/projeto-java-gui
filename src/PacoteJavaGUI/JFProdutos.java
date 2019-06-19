@@ -28,20 +28,27 @@ public class JFProdutos extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        btnNovo = new javax.swing.JButton();
+        btnSalvar = new javax.swing.JButton();
         btnEditar = new javax.swing.JButton();
-        btnExcluir = new javax.swing.JButton();
+        btnLimpar = new javax.swing.JButton();
         btnVoltar = new javax.swing.JButton();
-        lblImpressora = new javax.swing.JLabel();
-        lblSmartphone = new javax.swing.JLabel();
-        lblNotebook = new javax.swing.JLabel();
+        lblNome = new javax.swing.JLabel();
+        lblFabricante = new javax.swing.JLabel();
+        lblDataVal = new javax.swing.JLabel();
+        lblLote = new javax.swing.JLabel();
+        lblDataFab = new javax.swing.JLabel();
+        txtNome = new javax.swing.JTextField();
+        txtFabricante = new javax.swing.JTextField();
+        txtDataFab = new javax.swing.JFormattedTextField();
+        txtDataVal = new javax.swing.JFormattedTextField();
+        txtLote = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        btnNovo.setText("Novo");
-        btnNovo.addActionListener(new java.awt.event.ActionListener() {
+        btnSalvar.setText("Salvar");
+        btnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnNovoActionPerformed(evt);
+                btnSalvarActionPerformed(evt);
             }
         });
 
@@ -52,10 +59,10 @@ public class JFProdutos extends javax.swing.JFrame {
             }
         });
 
-        btnExcluir.setText("Excluir");
-        btnExcluir.addActionListener(new java.awt.event.ActionListener() {
+        btnLimpar.setText("Limpar");
+        btnLimpar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnExcluirActionPerformed(evt);
+                btnLimparActionPerformed(evt);
             }
         });
 
@@ -72,11 +79,11 @@ public class JFProdutos extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(35, 35, 35)
-                .addComponent(btnNovo)
+                .addComponent(btnSalvar)
                 .addGap(18, 18, 18)
                 .addComponent(btnEditar)
                 .addGap(18, 18, 18)
-                .addComponent(btnExcluir)
+                .addComponent(btnLimpar)
                 .addGap(18, 18, 18)
                 .addComponent(btnVoltar)
                 .addContainerGap(39, Short.MAX_VALUE))
@@ -86,55 +93,84 @@ public class JFProdutos extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(16, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnNovo)
+                    .addComponent(btnSalvar)
                     .addComponent(btnEditar)
-                    .addComponent(btnExcluir)
+                    .addComponent(btnLimpar)
                     .addComponent(btnVoltar))
                 .addContainerGap())
         );
 
-        lblImpressora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/impressora.jpg"))); // NOI18N
-        lblImpressora.setText("Impressora");
-        lblImpressora.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lblImpressora.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lblNome.setText("Nome do produto");
 
-        lblSmartphone.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/iphone.png"))); // NOI18N
-        lblSmartphone.setText("Smartphone");
-        lblSmartphone.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lblSmartphone.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lblFabricante.setText("Fabricante do produto");
 
-        lblNotebook.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PacoteJavaGUI/imagens/notebook.png"))); // NOI18N
-        lblNotebook.setText("Notebook");
-        lblNotebook.setToolTipText("");
-        lblNotebook.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        lblNotebook.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        lblDataVal.setText("Data Validade");
+
+        lblLote.setText("Lote");
+
+        lblDataFab.setText("Data Fabricação");
+
+        try {
+            txtDataFab.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
+        txtDataFab.setHorizontalAlignment(javax.swing.JTextField.LEFT);
+
+        try {
+            txtDataVal.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(24, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(18, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(lblNome)
+                            .addComponent(lblFabricante)
+                            .addComponent(lblDataFab)
+                            .addComponent(lblDataVal)
+                            .addComponent(lblLote))
+                        .addGap(46, 46, 46)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtNome)
+                            .addComponent(txtFabricante)
+                            .addComponent(txtDataVal)
+                            .addComponent(txtDataFab, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                            .addComponent(txtLote, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE))))
                 .addGap(26, 26, 26))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addComponent(lblImpressora, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(lblNotebook, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(50, 50, 50)
-                .addComponent(lblSmartphone, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(80, 80, 80)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblSmartphone, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblNotebook, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lblImpressora, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 176, Short.MAX_VALUE)
+                .addGap(98, 98, 98)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblNome)
+                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblFabricante)
+                    .addComponent(txtFabricante, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDataFab)
+                    .addComponent(txtDataFab, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblDataVal)
+                    .addComponent(txtDataVal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(lblLote)
+                    .addComponent(txtLote, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
@@ -148,8 +184,8 @@ public class JFProdutos extends javax.swing.JFrame {
     
     public void desabilitaBotoes(){
             btnEditar.setEnabled(false);
-            btnExcluir.setEnabled(false);
-            btnNovo.setEnabled(false);
+            btnLimpar.setEnabled(false);
+            btnSalvar.setEnabled(false);
     }
     private void btnEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEditarActionPerformed
         // TODO add your handling code here:
@@ -159,12 +195,12 @@ public class JFProdutos extends javax.swing.JFrame {
         
     }//GEN-LAST:event_btnEditarActionPerformed
 
-    private void btnNovoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNovoActionPerformed
+    private void btnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalvarActionPerformed
         // TODO add your handling code here:
-        if(btnNovo.isEnabled()){
+        if(btnSalvar.isEnabled()){
             desabilitaBotoes();
         }
-    }//GEN-LAST:event_btnNovoActionPerformed
+    }//GEN-LAST:event_btnSalvarActionPerformed
 
     private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
         // TODO add your handling code here:
@@ -175,12 +211,16 @@ public class JFProdutos extends javax.swing.JFrame {
             this.setVisible(false);
     }//GEN-LAST:event_btnVoltarActionPerformed
 
-    private void btnExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExcluirActionPerformed
+    private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
         // TODO add your handling code here:
-        if(btnExcluir.isEnabled()){
-            desabilitaBotoes();
-        }
-    }//GEN-LAST:event_btnExcluirActionPerformed
+            if (btnLimpar.isEnabled()) {
+            txtNome.setText("");
+            txtFabricante.setText("");
+            txtDataFab.setText("");
+            txtDataVal.setText("");
+            txtLote.setText("");
+            }
+    }//GEN-LAST:event_btnLimparActionPerformed
 
     /**
      * @param args the command line arguments
@@ -222,12 +262,19 @@ public class JFProdutos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEditar;
-    private javax.swing.JButton btnExcluir;
-    private javax.swing.JButton btnNovo;
+    private javax.swing.JButton btnLimpar;
+    private javax.swing.JButton btnSalvar;
     private javax.swing.JButton btnVoltar;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JLabel lblImpressora;
-    private javax.swing.JLabel lblNotebook;
-    private javax.swing.JLabel lblSmartphone;
+    private javax.swing.JLabel lblDataFab;
+    private javax.swing.JLabel lblDataVal;
+    private javax.swing.JLabel lblFabricante;
+    private javax.swing.JLabel lblLote;
+    private javax.swing.JLabel lblNome;
+    private javax.swing.JFormattedTextField txtDataFab;
+    private javax.swing.JFormattedTextField txtDataVal;
+    private javax.swing.JTextField txtFabricante;
+    private javax.swing.JTextField txtLote;
+    private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }
